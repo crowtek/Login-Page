@@ -2,13 +2,14 @@
 // Should take
 // - Form
 // - Image side
+import Background from "../components/background/Background";
 
 
 const Login = () => {
     return(
-        <>
-        Test 
-        </>
+        <div style={{padding:10}}>
+            <Background />
+        </div>
     )
 }
 
