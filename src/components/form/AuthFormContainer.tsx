@@ -1,12 +1,13 @@
 import { useState } from "react";
 import SocialLogins from "./SocialLogins";
 import RegisterForm from "./RegisterForm";
+import LoginForm from "./LoginForm";
 
 // or
 // Form
 // login -> regis switch
 
-const LoginForm = () => {
+const AuthFormContainer = () => {
   const [isLoginMode, setIsLoginMode] = useState(false);
 
   return (
@@ -22,7 +23,8 @@ const LoginForm = () => {
       {isLoginMode ? <h1>Login</h1> : <h1>Create a Acount</h1>}
       <SocialLogins />
       <h3>or</h3>
-      <RegisterForm />
+
+      {isLoginMode ? <LoginForm /> : <RegisterForm />}
 
       <span style={{ display: "flex", alignItems: "center", gap: 10 }}>
         <p>Already have a Account?</p>
@@ -37,4 +39,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default AuthFormContainer;
