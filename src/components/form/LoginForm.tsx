@@ -1,12 +1,33 @@
-import Input from './Input';
+import React, { useState } from 'react';
+import Input from './Input'; // Assuming this is a controlled component
 
 const LoginForm = () => {
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // Sumbit Logic
+  };
+
   return (
-    <div className='auth-form'>
-      <Input name='Email' />
-      <Input name='Passwort' />
-      <button className='auth-form--button'>Login</button>
-    </div>
+    <form className='auth-form' onSubmit={handleSubmit}>
+      <Input name='email' onChange={handleChange} />
+      <Input name='password' onChange={handleChange} />
+      <button className='auth-form--button' type='submit'>
+        Login
+      </button>
+    </form>
   );
 };
 
