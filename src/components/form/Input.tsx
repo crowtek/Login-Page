@@ -1,18 +1,5 @@
 const Input: React.FC<{ name: string }> = ({ name }) => {
-  return (
-    <input
-      type="text"
-      name={name}
-      placeholder={name}
-      style={{
-        backgroundColor: "rgb(228 220 220)",
-        border: "none",
-        borderRadius: 25,
-        color: "black",
-        padding: 20,
-      }}
-    />
-  );
+  return <input className='auth-form--input' type='text' name={name} placeholder={name} />;
 };
 
 export default Input;

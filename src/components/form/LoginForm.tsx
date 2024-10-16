@@ -1,19 +1,11 @@
-import Input from "./Input";
-import SubmitButton from "./SubmitButton";
+import Input from './Input';
 
 const LoginForm = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        gap: 10,
-        width: "70%",
-      }}
-    >
-      <Input name="Email" />
-      <Input name="Passwort" />
-      <SubmitButton text={"Login"} />
+    <div className='auth-form'>
+      <Input name='Email' />
+      <Input name='Passwort' />
+      <button className='auth-form--button'>Login</button>
     </div>
   );
 };
