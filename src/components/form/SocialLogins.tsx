@@ -6,7 +6,7 @@ const SocialLogins = () => {
   return (
     <div style={styles.container}>
       <button style={{ ...styles.button, backgroundColor: "#1877F2" }}>
-        <FaFacebook size={24} color="white" />
+        <FaFacebook size={35} color="white" />
       </button>
       <button
         style={{
@@ -15,10 +15,10 @@ const SocialLogins = () => {
           border: "1px solid #ddd",
         }}
       >
-        <FcGoogle size={24} />
+        <FcGoogle size={35} />
       </button>
       <button style={{ ...styles.button, backgroundColor: "#000000" }}>
-        <FaApple size={24} color="white" />
+        <FaApple size={35} color="white" />
       </button>
     </div>
   );
@@ -42,6 +42,7 @@ const styles = {
     border: "none",
     cursor: "pointer",
     outline: "none",
+    padding: 15,
   },
 };
 

@@ -13,7 +13,7 @@ const AuthFormContainer = () => {
   return (
     <div
       style={{
-        width: "48vw",
+        width: "46vw",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
