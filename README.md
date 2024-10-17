@@ -1,6 +1,6 @@
 # React Vite Login Page
 
-A simple login page built with React and Vite. This project includes a basic form, styled components, and icon usage with the `react-icons` library.
+A simple login page built with React and Vite. This project includes a basic form (react-hook-form), styled components(animated with framer), and icon usage with the `react-icons` library.
 ![Screenshot of Login Page](Screenshot.png)
 
 ## Live Demo
