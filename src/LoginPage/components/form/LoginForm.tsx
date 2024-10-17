@@ -22,8 +22,8 @@ const LoginForm = () => {
 
   return (
     <form className='auth-form' onSubmit={handleSubmit}>
-      <Input name='email' onChange={handleChange} />
-      <Input name='password' onChange={handleChange} />
+      <Input name='email' onChange={handleChange} placeholder='Email' />
+      <Input name='password' onChange={handleChange} placeholder='Password' />
       <button className='auth-form--button' type='submit'>
         Login
       </button>

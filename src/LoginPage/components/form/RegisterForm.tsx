@@ -24,7 +24,7 @@ const RegisterForm = () => {
   return (
     <form className='auth-form' onSubmit={handleSubmit}>
       <Input name='fullName' value={formData.fullName} onChange={handleChange} placeholder='Full Name' required />
-      <Input name='email' type='email' value={formData.email} onChange={handleChange} required />
+      <Input name='email' type='email' placeholder='Email' value={formData.email} onChange={handleChange} required />
       <Input
         name='password'
         type='password'

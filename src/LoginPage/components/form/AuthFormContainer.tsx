@@ -5,7 +5,7 @@ import LoginForm from './LoginForm';
 import './style.css';
 
 const AuthFormContainer = () => {
-  const [isLoginMode, setIsLoginMode] = useState(false);
+  const [isLoginMode, setIsLoginMode] = useState(true);
 
   return (
     <div className='auth-form--container'>
@@ -16,8 +16,8 @@ const AuthFormContainer = () => {
       {isLoginMode ? <LoginForm /> : <RegisterForm />}
 
       <span className='text-container'>
-        <p>Already have a Account?</p>
-        <h5 onClick={() => setIsLoginMode((prev) => !prev)}>Log in</h5>
+        <p>{isLoginMode ? '' : 'Already have a Account?'}</p>
+        <h5 onClick={() => setIsLoginMode((prev) => !prev)}>{isLoginMode ? 'Create Account' : 'Log in'}</h5>
       </span>
     </div>
   );

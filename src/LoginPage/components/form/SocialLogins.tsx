@@ -1,5 +1,5 @@
 import { FaFacebook, FaApple } from 'react-icons/fa';
-import { FcGoogle } from 'react-icons/fc';
+import { FaGoogle } from 'react-icons/fa';
 
 const SocialLogins = () => {
   return (
@@ -8,7 +8,7 @@ const SocialLogins = () => {
         <FaFacebook size={25} />
       </button>
       <button>
-        <FcGoogle size={25} />
+        <FaGoogle size={25} />
       </button>
       <button>
         <FaApple size={25} />
