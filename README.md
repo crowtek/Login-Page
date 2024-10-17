@@ -48,9 +48,9 @@ Make sure you have the following installed:
 
    ```
 
-4. **Install react-icons**
+4. **Install dependencies:**
 
    ```bash
-   npm install react-icons
+   npm install react-icons react-hook-form
 
    ```

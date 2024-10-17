@@ -3,7 +3,7 @@
 * {
   --grey: #e4dcdc;
   --dark-grey: #abafb0;
-  --blue: blue;
+  --blue: rgba(44, 44, 225, 0.765);
   --text: black;
   --green: #3b6452;
   --white: rgb(223, 222, 222);
@@ -77,4 +77,21 @@ body {
 .text-container h5 {
   color: var(--blue);
   cursor: pointer;
+}
+
+.form-error {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  color: rgba(241, 55, 55, 0.761);
+}
+
+.toggle-button {
+  background-color: transparent;
+  border: none;
+  color: var(--blue);
+}
+.toggle-button:focus {
+  color: var(--dark-grey);
+  outline: none;
 }

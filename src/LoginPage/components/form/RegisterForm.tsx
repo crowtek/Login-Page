@@ -1,38 +1,55 @@
-import React, { useState } from 'react';
-import Input from './Input'; // Assuming this is a controlled component
+import React from 'react';
+import { useForm, SubmitHandler } from 'react-hook-form';
+import Input from './Input';
 
-const RegisterForm = () => {
-  const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    password: '',
-  });
+interface RegisterFormInputs {
+  fullName: string;
+  email: string;
+  password: string;
+}
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
+const RegisterForm: React.FC = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<RegisterFormInputs>();
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Submit logic
+  const onSubmit: SubmitHandler<RegisterFormInputs> = (data) => {
+    console.log(data); // Replace with actual submit logic
   };
 
   return (
-    <form className='auth-form' onSubmit={handleSubmit}>
-      <Input name='fullName' value={formData.fullName} onChange={handleChange} placeholder='Full Name' required />
-      <Input name='email' type='email' placeholder='Email' value={formData.email} onChange={handleChange} required />
+    <form className='auth-form' onSubmit={handleSubmit(onSubmit)}>
+      <Input {...register('fullName', { required: 'Full Name is required' })} placeholder='Full Name' />
+      {errors.fullName && <div className='form-error'>{errors.fullName.message}</div>}
+
       <Input
-        name='password'
-        type='password'
-        value={formData.password}
-        onChange={handleChange}
-        placeholder='Password'
-        required
+        {...register('email', {
+          required: 'Email is required',
+          pattern: {
+            value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+            message: 'Invalid email address',
+          },
+        })}
+        placeholder='Email'
+        type='email'
       />
+      {errors.email && <div className='form-error'>{errors.email.message}</div>}
+
+      <Input
+        {...register('password', {
+          required: 'Password is required',
+          minLength: {
+            value: 6,
+            message: 'Password must be at least 6 characters',
+          },
+        })}
+        placeholder='Password'
+        type='password'
+      />
+      {errors.password && <div className='form-error'>{errors.password.message}</div>}
+
       <button className='auth-form--button' type='submit'>
         Start
       </button>
