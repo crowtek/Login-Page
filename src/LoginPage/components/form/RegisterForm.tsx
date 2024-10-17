@@ -1,6 +1,8 @@
 import React from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { motion } from 'framer-motion';
 import Input from './Input';
+import { slideInVariants, formContainerVariants } from '../animations'; // Import animations
 
 interface RegisterFormInputs {
   fullName: string;
@@ -20,8 +22,17 @@ const RegisterForm: React.FC = () => {
   };
 
   return (
-    <form className='auth-form' onSubmit={handleSubmit(onSubmit)}>
-      <Input {...register('fullName', { required: 'Full Name is required' })} placeholder='Full Name' />
+    <motion.form
+      className='auth-form'
+      onSubmit={handleSubmit(onSubmit)}
+      variants={formContainerVariants}
+      initial='hidden'
+      animate='visible'>
+      <Input
+        {...register('fullName', { required: 'Full Name is required' })}
+        placeholder='Full Name'
+        variants={slideInVariants} // Apply sliding animation
+      />
       {errors.fullName && <div className='form-error'>{errors.fullName.message}</div>}
 
       <Input
@@ -34,6 +45,7 @@ const RegisterForm: React.FC = () => {
         })}
         placeholder='Email'
         type='email'
+        variants={slideInVariants} // Apply sliding animation
       />
       {errors.email && <div className='form-error'>{errors.email.message}</div>}
 
@@ -47,13 +59,18 @@ const RegisterForm: React.FC = () => {
         })}
         placeholder='Password'
         type='password'
+        variants={slideInVariants} // Apply sliding animation
       />
       {errors.password && <div className='form-error'>{errors.password.message}</div>}
 
-      <button className='auth-form--button' type='submit'>
+      <motion.button
+        className='auth-form--button'
+        type='submit'
+        variants={slideInVariants} // Apply sliding animation
+      >
         Start
-      </button>
-    </form>
+      </motion.button>
+    </motion.form>
   );
 };
 
