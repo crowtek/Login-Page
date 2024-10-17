@@ -7,7 +7,7 @@
   --text: black;
   --green: #3b6452;
   --white: rgb(223, 222, 222);
-  --trans-background: #7f8883db;
+  --trans-background: #7b7b7be0;
 
   padding: 0;
   margin: 0;
@@ -15,6 +15,15 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+}
+
+.auth-form--container {
+  width: 36vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5vh;
 }
 
 .auth-form {
@@ -29,15 +38,6 @@ body {
   border-radius: 25px;
   background-color: var(--green);
   padding: 15px;
-}
-
-.auth-form--container {
-  width: 46vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5vh;
 }
 
 .auth-form--input {
