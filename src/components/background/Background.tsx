@@ -1,5 +1,6 @@
 import InfoBox from './InfoBox';
 import StatBox from './StatBox';
+import Label from './Label';
 import './style.css';
 
 const Background = () => {
@@ -7,6 +8,7 @@ const Background = () => {
     <div className='background-container'>
       <InfoBox />
       <StatBox />
+      <Label />
     </div>
   );
 };
