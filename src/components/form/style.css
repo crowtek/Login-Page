@@ -2,9 +2,15 @@
 
 * {
   --grey: #e4dcdc;
+  --dark-grey: #abafb0;
   --blue: blue;
   --text: black;
   --green: #3b6452;
+  --white: rgb(223, 222, 222);
+  --trans-background: #7f8883db;
+
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -12,7 +18,7 @@ body {
 }
 
 .auth-form {
-  width: 70%;
+  width: 55%;
   display: flex;
   flex-direction: column;
   gap: 10px;

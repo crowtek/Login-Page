@@ -1,0 +1,108 @@
+/* Container for the background */
+.background-container {
+  position: relative;
+  height: 97vh;
+  width: 50vw;
+  background-image: url('../../assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+/* Container for the InfoBox */
+.InfoBox-container {
+  position: absolute;
+  top: 13vh;
+  left: 5vw;
+  display: flex;
+  flex-direction: column;
+}
+
+/* InfoBox extension element for line and dot */
+.InfoBox-extension {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+}
+
+/* Dot design in the extension */
+.InfoBox-dot {
+  width: 6px;
+  height: 6px;
+  border: solid 3px var(--dark-grey);
+  background-color: var(--grey);
+  border-radius: 50%;
+}
+
+/* Vertical line below the dot */
+.InfoBox-line {
+  width: 2px;
+  height: 120px;
+  background-color: var(--dark-grey);
+}
+
+/* Main InfoBox styling */
+.InfoBox-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--trans-background);
+  border-radius: 50px;
+  padding: 12px 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+/* Icon container in the InfoBox */
+.InfoBox-box-icon {
+  width: 50px;
+  height: 50px;
+  background-color: var(--grey);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+}
+
+/* Text inside the InfoBox */
+.InfoBox-box-text {
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+}
+
+.InfoBox-box-text p {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 900px) {
+  .background-container {
+    width: 90vw;
+    height: 80vh;
+  }
+
+  .InfoBox-box {
+    width: auto;
+    padding: 10px 15px;
+  }
+
+  .InfoBox-box-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .InfoBox-box-text p {
+    font-size: 0.8rem;
+  }
+
+  .InfoBox-box-text h3 {
+    font-size: 1.1rem;
+  }
+}
