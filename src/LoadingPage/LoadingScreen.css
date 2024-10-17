@@ -1,0 +1,30 @@
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f4f4f4; /* Background color for the loading screen */
+}
+
+.loading-ring {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.loading-ring svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.loading-percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--green);
+}
