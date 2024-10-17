@@ -25,6 +25,9 @@ body {
   align-items: center;
   gap: 5vh;
 }
+.auth-form--container h1 {
+  text-align: center;
+}
 
 .auth-form {
   width: 55%;
@@ -94,4 +97,16 @@ body {
 .toggle-button:focus {
   color: var(--dark-grey);
   outline: none;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 900px) {
+  .auth-form--container {
+    width: 100vw;
+    gap: 8vh;
+  }
+  .auth-form {
+    width: 75%;
+    gap: 20px;
+  }
 }

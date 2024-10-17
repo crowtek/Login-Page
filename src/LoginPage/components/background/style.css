@@ -124,25 +124,6 @@
 /* Media queries for responsiveness */
 @media (max-width: 900px) {
   .background-container {
-    width: 90vw;
-    height: 80vh;
-  }
-
-  .InfoBox-box {
-    width: auto;
-    padding: 10px 15px;
-  }
-
-  .InfoBox-box-icon {
-    width: 40px;
-    height: 40px;
-  }
-
-  .InfoBox-box-text p {
-    font-size: 0.8rem;
-  }
-
-  .InfoBox-box-text h3 {
-    font-size: 1.1rem;
+    display: none;
   }
 }
