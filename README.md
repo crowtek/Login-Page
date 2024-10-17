@@ -1,50 +1,56 @@
-# React + TypeScript + Vite
+# React Vite Login Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple login page built with React and Vite. This project includes a basic form, styled components, and icon usage with the `react-icons` library.
+![Screenshot of Login Page](Screenshot.png)
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Check out the live version of the login page here:
 
-## Expanding the ESLint configuration
+[Vercel Deployment Link](https://login-three-ebon.vercel.app)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+- Responsive login page design.
+- Custom input components for user login information.
+- `react-icons` library for easy icon integration.
+- Easy to set up with Vite for a fast development environment.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Setup
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Prerequisites
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Make sure you have the following installed:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- [Node.js](https://nodejs.org/) (LTS version recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone <your-repository-url>
+
+   ```
+
+2. **Navigate into the project directory:**
+
+   ```bash
+   cd your-project-name
+
+   ```
+
+3. **Install dependencies:**
+
+   ```bash
+   npm install
+
+   ```
+
+4. **Install react-icons**
+
+   ```bash
+   npm install react-icons
+
+   ```
