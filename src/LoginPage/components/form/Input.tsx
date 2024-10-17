@@ -1,7 +1,10 @@
 import React from 'react';
+import { motion, MotionProps } from 'framer-motion';
 
-const Input: React.FC<React.InputHTMLAttributes<HTMLInputElement> & { name: string }> = ({ name, ...props }) => {
-  return <input className='auth-form--input' type='text' name={name} placeholder={name} {...props} />;
+type InputProps = React.InputHTMLAttributes<HTMLInputElement> & MotionProps & { name: string };
+
+const Input: React.FC<InputProps> = ({ name, ...props }) => {
+  return <motion.input className='auth-form--input' name={name} placeholder={name} {...props} />;
 };
 
 export default Input;

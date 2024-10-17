@@ -1,34 +1,32 @@
-import { FaFacebook, FaApple } from 'react-icons/fa';
-import { FaGoogle } from 'react-icons/fa';
+import { FaFacebook, FaApple, FaGoogle } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+import { SocialButtons, buttonVariants } from '../animations';
 
 const handleFacebookLogin = () => {
-  // Facebook login logic here
   console.log('Facebook login');
 };
 
 const handleGoogleLogin = () => {
-  // Google login logic here
   console.log('Google login');
 };
 
 const handleAppleLogin = () => {
-  // Apple login logic here
   console.log('Apple login');
 };
 
 const SocialLogins = () => {
   return (
-    <div className='auth-form--socials-container'>
-      <button onClick={handleFacebookLogin}>
-        <FaFacebook size={25} />
-      </button>
-      <button onClick={handleGoogleLogin}>
-        <FaGoogle size={25} />
-      </button>
-      <button onClick={handleAppleLogin}>
-        <FaApple size={25} />
-      </button>
-    </div>
+    <motion.div className='auth-form--socials-container' variants={SocialButtons} initial='hidden' animate='visible'>
+      <motion.button variants={buttonVariants} onClick={handleFacebookLogin}>
+        <FaFacebook size={20} />
+      </motion.button>
+      <motion.button variants={buttonVariants} onClick={handleGoogleLogin}>
+        <FaGoogle size={20} />
+      </motion.button>
+      <motion.button variants={buttonVariants} onClick={handleAppleLogin}>
+        <FaApple size={20} />
+      </motion.button>
+    </motion.div>
   );
 };
 

@@ -51,6 +51,6 @@ Make sure you have the following installed:
 4. **Install dependencies:**
 
    ```bash
-   npm install react-icons react-hook-form
+   npm install react-icons react-hook-form framer-motion
 
    ```
