@@ -1,17 +1,19 @@
 import './style.css';
+import { motion } from 'framer-motion';
+import { StatboxAnimation, StatboxLineAnimation, DotAnimation } from '../animations';
 
 const StatBox = () => {
   return (
     <div className='StatBox-container'>
-      <div className='StatBox-box'>
+      <motion.div {...StatboxAnimation} className='StatBox-box'>
         <h3>1,2 km</h3>
         <p>
           left to your <br /> accommodation
         </p>
-      </div>
+      </motion.div>
       <div className='InfoBox-extension'>
-        <div className='InfoBox-line'></div>
-        <div className='InfoBox-dot'></div>
+        <motion.div {...StatboxLineAnimation} className='InfoBox-line'></motion.div>
+        <motion.div {...DotAnimation} className='InfoBox-dot'></motion.div>
       </div>
     </div>
   );

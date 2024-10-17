@@ -1,14 +1,17 @@
 import './style.css';
 import { FiThermometer } from 'react-icons/fi';
+import { motion } from 'framer-motion';
+import { InfoBoxAnimation, InfoBoxLineAnimation, DotAnimation } from '../animations';
 
 const InfoBox = () => {
   return (
     <div className='InfoBox-container'>
       <div className='InfoBox-extension'>
-        <div className='InfoBox-dot'></div>
-        <div className='InfoBox-line'></div>
+        <motion.div {...DotAnimation} className='InfoBox-dot'></motion.div>
+        <motion.div {...InfoBoxLineAnimation} className='InfoBox-line'></motion.div>
       </div>
-      <div className='InfoBox-box'>
+
+      <motion.div {...InfoBoxAnimation} className='InfoBox-box'>
         <div className='InfoBox-box-icon'>
           <FiThermometer size={24} color='#fff' />
         </div>
@@ -16,7 +19,7 @@ const InfoBox = () => {
           <p>Temperature</p>
           <h3>18° - 22°</h3>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
